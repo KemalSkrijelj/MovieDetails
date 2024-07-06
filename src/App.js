@@ -8,21 +8,25 @@ import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import MovieDetails from "./pages/MovieDetails";
 //RouterDOM
-import { Switch, Route, Routes } from "react-router";
+import { Switch, Route, Routes, useLocation } from "react-router";
+
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation()
   return (
     <div className="App">
     
       <GlobalStyle />
       <Nav />
-      
-      <Routes>
-      <Route path="/" element={<AboutUs />}/>
+      <AnimatePresence >
+      <Routes location={location} key={location.pathname}>
+      <Route exact path="/" element={<AboutUs />}/>
       <Route exact path="/contactUs" element={<ContactUs />}/>
       <Route exact path="/work" element={<OurWork />}/>
       <Route path="/work/:id" element={<MovieDetails />}/>
       </Routes>
+      </AnimatePresence>
       
       
     </div>

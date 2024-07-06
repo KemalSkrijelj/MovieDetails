@@ -7,6 +7,7 @@ export const About = styled.div`
   align-items: center;
   padding: 5rem 8rem;
   color: white;
+
 `
 export const Description = styled.div `
   flex: 1;
