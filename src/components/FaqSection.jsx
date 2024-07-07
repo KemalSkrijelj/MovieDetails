@@ -1,83 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "./Toggle";
+import { LayoutGroup } from "framer-motion";
 
 const FaqSection = () => {
-  return(
-   <Faq className="faq">
-    <h2>Any Questions <span>FAQ</span></h2>
-    <div className="question">
-      <h4>How Do I start?</h4>
-      <div className="answer">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perspiciatis.</p>
+  return (
+    <Faq>
+      <h2>
+        Any Questions <span>FAQ</span>
+      </h2>
+      <LayoutGroup>
+        <Toggle title="How do I start? ">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
 
-      </div>
-      <div className="faq-line"></div>
-    </div>
-    <div className="question">
-      <h4>Daily Schedule</h4>
-      <div className="answer">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perspiciatis.</p>
-        
-      </div>
-      <div className="faq-line"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam, perspiciatis.
+            </p>
+          </div>
+        </Toggle>
 
-    </div>
-    <div className="question">
-      <h4>Diferrent Payment Methods</h4>
-      <div className="answer">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perspiciatis.</p>
-        
-      </div>
-      <div className="faq-line"></div>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam, perspiciatis.
+            </p>
+          </div>
+        </Toggle>
 
-    </div>
-    <div className="question">
-      <h4>What product do you offer</h4>
-      <div className="answer">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perspiciatis.</p>
-        
-      </div>
-      <div className="faq-line"></div>
+        <Toggle title="Diferrent Payment Methods">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam, perspiciatis.
+            </p>
+          </div>
+        </Toggle>
 
-    </div>
-   </Faq>
-  )
-}
+        <Toggle title="What product do you offer.">
+          <div className="answer">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam, perspiciatis.
+            </p>
+          </div>
+        </Toggle>
+      </LayoutGroup>
+    </Faq>
+  );
+};
 
 const Faq = styled(About)`
+  display: block;
 
-  display:block;
-
-  span{
-  display:block
+  span {
+    display: block;
   }
 
-  h2{
-  padding-bottom: 2rem;
-  font-weight: lighter
+  h2 {
+    font-size: 45px;
+    padding-bottom: 2rem;
+    font-weight: lighter;
   }
 
-  .faq-line{
-  background: #cccccc;
-  height: 0.2rem;
-  margin: 2rem 0rem;
-  width: 100%auto
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%auto;
   }
-  .question{
-   padding:3rem 0rem;
-   cursor:pointer
+  .question {
+    padding: 1.5rem 0rem;
+    cursor: pointer;
   }
-   .answer{
-   p{
-   margin:0;
-   padding: 1.5rem 0rem;
-   width:100%;
-   }
-   }
-`
-export default FaqSection
+  .answer {
+    p {
+      margin: 0;
+      padding: 1rem 0rem;
+      width: 100%;
+    }
+  }
+`;
+export default FaqSection;
