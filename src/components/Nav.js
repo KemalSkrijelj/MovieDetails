@@ -5,46 +5,49 @@ import styled from "styled-components";
 const Nav = () => {
   return (
     <StyledNav>
-        <h1>
-          <Link to='/'>Capture</Link>
-        </h1>
-        <ul>
-          <li>
-            <Link to="/">1. About Us</Link>
-          </li>
-          <li>
-            <Link to='/work'>2. Our Work</Link>
-          </li>
-          <li>
-            <Link to='/contactUs'>3. Contact Us</Link>
-          </li>
-        </ul>
+      <h1>
+        <Link to="/">Capture</Link>
+      </h1>
+      <ul>
+        <li>
+          <Link to="/">1. About Us</Link>
+        </li>
+        <li>
+          <Link to="/work">2. Our Work</Link>
+        </li>
+        <li>
+          <Link to="/contactUs">3. Contact Us</Link>
+        </li>
+      </ul>
     </StyledNav>
   );
 };
 
 const StyledNav = styled.nav`
-  min-height:10vh;
-  display:flex;
+  min-height: 10vh;
+  display: flex;
   justify-content: space-between;
-  align-items:centar;
+  align-items: centar;
   padding: 2.2rem 10rem;
   background: #242424;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   a {
-    color:white;
+    color: white;
     text-decoration: none;
   }
   ul {
-  display: flex;
-  list-style: none;
+    display: flex;
+    list-style: none;
   }
-  #logo{
-   font-size: 1.5rem;
-   font-weight:lighter;
+  #logo {
+    font-size: 1.5rem;
+    font-weight: lighter;
   }
-   li{
-   padding-left:8rem;
-   position:relative
-   }
-`
-export default Nav
+  li {
+    padding-left: 8rem;
+    position: relative;
+  }
+`;
+export default Nav;

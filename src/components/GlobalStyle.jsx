@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
 
 body {
-  background-color: #272626;
+  background-color: #1b1b1b;
+  overflow-x: hidden
 }
 button {
   font-weight: bold;
@@ -56,6 +57,6 @@ p{
 
 }
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
